@@ -42,6 +42,7 @@ app.add_middleware(
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "http://192.168.0.102:5173",
+        "https://ai-stock-advisor.vercel.app/login",
     ],
     allow_credentials=True,
     allow_methods=["*"],
