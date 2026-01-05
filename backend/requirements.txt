@@ -13,3 +13,4 @@ bcrypt
 apscheduler
 beautifulsoup4
 requests
+python-jose
