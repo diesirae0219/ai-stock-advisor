@@ -1,0 +1,264 @@
+/* ===============================
+   🌈  Global iOS App Theme
+   =============================== */
+
+:root {
+  --bg-main: #f5f5f7;
+  --card-bg: #ffffff;
+  --accent: #007aff;
+  --accent-soft: rgba(0, 122, 255, 0.12);
+  --border-subtle: rgba(0,0,0,0.06);
+  --shadow-soft: 0 10px 30px rgba(0,0,0,0.06);
+  --radius-xl: 22px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #fdfbff 0, #f5f5f7 45%, #f2f2f7 100%);
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Center App like iPhone screen */
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: radial-gradient(circle at top, #fdfbff 0, #f5f5f7 45%, #f2f2f7 100%);
+}
+
+.app-shell {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  position: relative;
+}
+
+
+/* ===============================
+   📱 iOS Navigation Bar (Header)
+   =============================== */
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.82);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
+  padding: 12px 16px 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-header-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* 使用者右上角 Badge */
+.user-badge {
+  margin-left: auto;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #eef4ff;
+  color: #3564ff;
+  font-size: 13px;
+  font-weight: 500;
+  border: 0.5px solid rgba(53, 100, 255, 0.25);
+}
+
+
+/* ===============================
+   📄 Main Content
+   =============================== */
+
+.app-content {
+  flex: 1;
+  padding: 16px 16px 90px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* ===============================
+   🍔 Drawer (Side Menu)
+   =============================== */
+
+.app-drawer {
+  position: absolute;
+  top: 56px;
+  left: 12px;
+  width: 220px;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: var(--radius-xl);
+  padding: 16px 14px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.16);
+  border: 0.5px solid rgba(0,0,0,0.08);
+  z-index: 30;
+}
+
+.app-drawer nav a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: var(--radius-xl);
+  font-size: 15px;
+  color: #111827;
+  font-weight: 500;
+}
+
+.app-drawer nav a:hover {
+  background: var(--accent-soft);
+}
+
+
+/* ===============================
+   🧭 Bottom Tab Bar (iPhone Style)
+   =============================== */
+
+.app-tabbar {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  width: 100%;
+  max-width: 480px;
+  padding: 6px 16px 4px;
+  z-index: 25;
+}
+
+.app-tabbar-inner {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  border-radius: 26px;
+  padding: 6px 14px;
+  border: 0.5px solid rgba(0,0,0,0.05);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+.app-tab {
+  flex: 1;
+  text-align: center;
+  padding: 6px 0;
+  border-radius: 20px;
+  font-size: 11px;
+  color: #6b7280;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.app-tab-active {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+
+/* ===============================
+   📰 Homepage News Cards
+   =============================== */
+
+.news-card-link {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffffff, #f5f5ff);
+  border: 0.5px solid var(--border-subtle);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.news-card-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+.news-card-thumb {
+  width: 90px;
+  height: 70px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.news-card-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.news-card-summary {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+
+/* ===============================
+   🧩 iOS Section Titles
+   =============================== */
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+.section-subtitle {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+
+/* ===============================
+   🔘 Buttons
+   =============================== */
+
+button {
+  font-family: inherit;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:active {
+  opacity: 0.75;
+}
+
+
+/* ===============================
+   🔲 Reusable iOS Card Style
+   =============================== */
+
+.ios-card {
+  background: var(--card-bg);
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: var(--shadow-soft);
+  border: 0.5px solid var(--border-subtle);
+  margin-bottom: 14px;
+}

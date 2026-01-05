@@ -1,0 +1,15 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.env
+news.db
+
+# Node / Frontend
+node_modules/
+dist/
+.vite/
+
+# OS
+.DS_Store
+Thumbs.db
