@@ -7,3 +7,4 @@ pillow
 httpx
 openai
 google-genai
+yfinance>=0.2.40
