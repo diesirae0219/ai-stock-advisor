@@ -8,3 +8,8 @@ httpx
 openai
 google-genai
 yfinance>=0.2.40
+passlib[bcrypt]
+bcrypt
+apscheduler
+beautifulsoup4
+requests
